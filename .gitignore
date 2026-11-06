@@ -1,0 +1,54 @@
+# ═══════════════════════════════════════════════
+#  .gitignore — ARM Road Anomaly Detection
+# ═══════════════════════════════════════════════
+
+# ── Python ───────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+venv/
+env/
+.venv/
+
+# ── YOLO / Model Weights (use HuggingFace Hub) ───
+*.pt
+*.onnx
+*.engine
+*.tflite
+*.ncnn
+*_ncnn_model/
+
+# ── Dataset images & labels (use Roboflow/Kaggle) 
+road_anomaly/
+Kaggle_pothole/
+kaggle_2/train/
+kaggle_2/valid/
+kaggle_2/test/
+kaggle_2/sample_video.mp4
+*.cache
+*.npy
+
+# ── Training run weights ──────────────────────────
+runs/detect/*/weights/
+
+# ── Training run plots (optional: comment out to keep)
+runs/detect/*/results.csv
+runs/detect/*/results.png
+runs/detect/*/confusion_matrix*.png
+runs/detect/*/PR_curve.png
+runs/detect/*/F1_curve.png
+runs/detect/*/R_curve.png
+runs/detect/*/P_curve.png
+runs/detect/*/events.out.*
+
+# ── Screenshots saved during demo ─────────────────
+alert_demo_*.jpg
+screenshot_*.jpg
+
+# ── OS clutter ────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
